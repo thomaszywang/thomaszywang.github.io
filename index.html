@@ -162,7 +162,8 @@
 <div class="layout">
   <aside class="sidebar">
     <div class="profile-img-wrap">
-      <img src="photo.jpg" alt="Zeyu Wang" class="profile-img"> 
+      <!-- To add your photo: <img src="photo.jpg" alt="Zeyu Wang"> -->
+      <img src="./assets/photo.jpg"  alt="Zeyu Wang" class="profile-img">
     </div>
     <div class="profile-name">Zeyu Wang</div>
     <div class="profile-role">PhD Applicant 2027</div>
@@ -175,14 +176,6 @@
       <a class="social-btn" href="https://scholar.google.com/citations?user=KhIblbwAAAAJ&hl" title="Google Scholar" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
       </a>
-    </div>
-
-    <div class="sidebar-card">
-      <div class="sidebar-card-title">Research Interests</div>
-      <div class="interest-item"><span class="interest-dot"></span>Advanced Display Technology</div>
-      <div class="interest-item"><span class="interest-dot"></span>Image Processing</div>
-      <div class="interest-item"><span class="interest-dot"></span>Deep Learning</div>
-      <div class="interest-item"><span class="interest-dot"></span>Light Field Display</div>
     </div>
 
     <div class="sidebar-card">
@@ -262,6 +255,24 @@
       </div>
 
       <div class="section-divider"></div>
+ 
+      <h2 class="section-heading" style="font-size:1.35rem; margin-bottom:0.85rem;">Research Interests</h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:0;">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
+          <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Advanced Display Technology</p>
+        </div>
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
+          <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Light Field Display</p>
+        </div>
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
+          <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Image Processing</p>
+        </div>
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
+          <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Deep Learning</p>
+        </div>
+      </div>
+      
+      <div class="section-divider"></div>
 
       <div class="pub-header">
         <h2 class="section-heading" style="font-size:1.35rem; margin-bottom:0;">Selected Publications</h2>
@@ -272,21 +283,21 @@
         <div class="pub-title">Deep learning-based real-time driving for 3-field sequential color displays with low color breakup and high fidelity</div>
         <div class="pub-authors"><span class="me">Z. Wang</span>, G. Zou, Y. Shen, B.R. Yang, Z. Qin</div>
         <div class="pub-venue">Optics Express · 2023</div>
-        <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">deep learning</span><span class="tag">color breakup</span></div>
+        <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">MOO</span><span class="tag">deep learning</span><span class="tag">color breakup</span></div>
       </div>
 
       <div class="pub-card">
         <div class="pub-title">Two-field sequential color liquid crystal displays with deep learning-enabled real-time driving</div>
         <div class="pub-authors"><span class="me">Z. Wang</span>, G. Zou, Y. Li, C. Ma, Z. Zhang, G. Zha, Y. Shen, B.R. Yang, Z. Qin</div>
         <div class="pub-venue">Optics Letters · 2023</div>
-        <div class="pub-tags"><span class="tag">LCD</span><span class="tag">real-time</span><span class="tag">deep learning</span></div>
+        <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">deep learning</span><span class="tag">real-time</span></div>
       </div>
 
       <div class="pub-card">
         <div class="pub-title">High-resolution light field display based on a mini-LED field sequential color micro-LCD</div>
         <div class="pub-authors">Z. Qin, <span class="me">Z. Wang</span> <em style="font-size:0.73rem;color:var(--text-tertiary)">(1st student author)</em>, Q. Wang, G. Zou, et al.</div>
         <div class="pub-venue">Advances in Display Technologies XIV · SPIE · 2024</div>
-        <div class="pub-tags"><span class="tag">light field</span><span class="tag">mini-LED</span><span class="tag conf">SPIE 2024</span></div>
+        <div class="pub-tags"><span class="tag">light field</span><span class="tag">FSC display</span><span class="tag">mini-LED</div>
       </div>
     </section>
 
@@ -456,47 +467,14 @@
       </p>
     </section>
 
-    <!-- AWARDS -->
-    <section class="section" id="sec-awards">
-      <h1 class="section-heading">Awards & Honors</h1>
-      <div class="award-item">
-        <span class="award-year">2021–24</span>
-        <div>
-          <div class="award-title">First-Class Scholarship (3×)</div>
-          <div class="award-org">Sun Yat-sen University</div>
-        </div>
-      </div>
-      <div class="award-item">
-        <span class="award-year">2021</span>
-        <div>
-          <div class="award-title">Admitted via Merit-Based Recommendation</div>
-          <div class="award-org">Exempted from National Graduate Entrance Examination · Sun Yat-sen University</div>
-        </div>
-      </div>
-      <div class="award-item">
-        <span class="award-year">2018–21</span>
-        <div>
-          <div class="award-title">First-Class Scholarship</div>
-          <div class="award-org">China University of Mining and Technology</div>
-        </div>
-      </div>
-      <div class="award-item">
-        <span class="award-year">2021</span>
-        <div>
-          <div class="award-title">Excellent Class Collective of Jiangsu Province</div>
-          <div class="award-org">As Class Monitor · China University of Mining and Technology</div>
-        </div>
-      </div>
-    </section>
-
     <!-- CV -->
     <section class="section" id="sec-cv">
       <h1 class="section-heading">Curriculum Vitae</h1>
       <div class="cv-section">
         <p style="font-size:0.9rem;color:var(--text-secondary);text-align:center;font-family:'Crimson Pro',serif;font-style:italic;">
-          Full CV available as PDF · Updated 2025
+          Full CV available as PDF · Updated 2026
         </p>
-        <a class="cv-btn" href="CV_PhD.pdf" target="_blank">
+        <a class="cv-btn" href="Zeyu_Wang_CV" target="Zeyu_Wang_CV.pdf">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
           Download CV (PDF)
         </a>
