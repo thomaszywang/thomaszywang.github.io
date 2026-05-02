@@ -1,4 +1,4 @@
-# Hi, I'm [Your Name] 👋
+# About Me 👋
  
 > *PhD Applicant · Advanced Display Technology · Light Field Display · Image Processing*
  
