@@ -473,40 +473,25 @@
     <!-- PHOTOGRAPHY -->
     <section class="section" id="sec-photography">
       <h1 class="section-heading">Photography</h1>
-      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.5rem;font-family:'Crimson Pro',serif;font-style:italic;line-height:1.8;">
+      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.75rem;font-family:'Crimson Pro',serif;font-style:italic;line-height:1.8;">
         Capturing light — what I study in the lab, what I chase outside it.<br>
-        Landscapes, long exposures, and the quiet geometry of cities.
+        Landscapes and moments from travels across the world.
       </p>
-      <div class="photo-grid">
-        <div class="photo-item">
-          <div class="photo-placeholder-text"><span>landscape</span></div>
-          <div class="photo-overlay"></div>
-          <div class="photo-caption">Landscape</div>
-        </div>
-        <div class="photo-item">
-          <div class="photo-placeholder-text"><span>urban</span></div>
-          <div class="photo-overlay"></div>
-          <div class="photo-caption">Urban</div>
-        </div>
-        <div class="photo-item">
-          <div class="photo-placeholder-text"><span>long exposure</span></div>
-          <div class="photo-overlay"></div>
-          <div class="photo-caption">Long Exposure</div>
-        </div>
-        <div class="photo-item">
-          <div class="photo-placeholder-text"><span>travel</span></div>
-          <div class="photo-overlay"></div>
-          <div class="photo-caption">Travel</div>
-        </div>
-        <div class="photo-item">
-          <div class="photo-placeholder-text"><span>hiking</span></div>
-          <div class="photo-overlay"></div>
-          <div class="photo-caption">Hiking</div>
+ 
+      <div class="carousel-wrap">
+        <div class="carousel-track" id="carouselTrack"></div>
+        <button class="carousel-btn carousel-prev" onclick="carouselMove(-1)">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button class="carousel-btn carousel-next" onclick="carouselMove(1)">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+        <div class="carousel-caption-bar">
+          <div class="carousel-location" id="carouselLocation"></div>
+          <span class="carousel-counter" id="carouselCounter"></span>
         </div>
       </div>
-      <p style="font-size:0.78rem;font-family:'DM Mono',monospace;color:var(--text-tertiary);margin-top:1.25rem;text-align:center;letter-spacing:0.04em;">
-        Replace placeholders with your actual photos · Add links to your gallery
-      </p>
+      <div class="carousel-dots" id="carouselDots"></div>
     </section>
 
     <!-- CV -->
@@ -533,6 +518,73 @@
     document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
     if (clickedEl) clickedEl.classList.add('active');
   }
+ 
+  // CAROUSEL
+  const photos = [
+    { file: 'Australia_Bondi_Beach.jpg', country: 'Australia', city: 'Bondi Beach' },
+    { file: 'China_Xinjiang.jpg',        country: 'China',     city: 'Xinjiang' },
+    { file: 'Japan_Atami_shi.jpg',       country: 'Japan',     city: 'Atami' },
+    { file: 'New_Zealand_Auckland.jpg',  country: 'New Zealand', city: 'Auckland' },
+    { file: 'New_Zealand_Lake_Tekapo.jpg', country: 'New Zealand', city: 'Lake Tekapo' },
+    { file: 'New_Zealand_Mount_Cook.jpg',  country: 'New Zealand', city: 'Mount Cook' },
+    { file: 'New_Zealand_Queenstown.jpg',  country: 'New Zealand', city: 'Queenstown' },
+    { file: 'Tanzania_Maasai_Tribe.jpg',   country: 'Tanzania',  city: 'Maasai Tribe' },
+    { file: 'Tanzania_Serengeti.jpg',      country: 'Tanzania',  city: 'Serengeti' },
+    { file: 'Tanzania_Tarangire.jpg',      country: 'Tanzania',  city: 'Tarangire' },
+    { file: 'Tanzania_Zanzibar.jpg',       country: 'Tanzania',  city: 'Zanzibar' },
+  ];
+ 
+  let current = 0;
+  const track = document.getElementById('carouselTrack');
+  const locEl  = document.getElementById('carouselLocation');
+  const cntEl  = document.getElementById('carouselCounter');
+  const dotsEl = document.getElementById('carouselDots');
+ 
+  function buildCarousel() {
+    photos.forEach((p, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'carousel-slide';
+      const img = document.createElement('img');
+      img.src = 'photography/' + p.file;
+      img.alt = p.country + ' · ' + p.city;
+      img.loading = i === 0 ? 'eager' : 'lazy';
+      slide.appendChild(img);
+      track.appendChild(slide);
+ 
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goTo(i);
+      dotsEl.appendChild(dot);
+    });
+    updateCaption();
+  }
+ 
+  function updateCaption() {
+    const p = photos[current];
+    locEl.innerHTML = '<span class="country">' + p.country + '</span>' + p.city;
+    cntEl.textContent = (current + 1) + ' / ' + photos.length;
+    document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+ 
+  function goTo(index) {
+    current = (index + photos.length) % photos.length;
+    track.style.transform = 'translateX(-' + current * 100 + '%)';
+    updateCaption();
+  }
+ 
+  function carouselMove(dir) { goTo(current + dir); }
+ 
+  // keyboard support
+  document.addEventListener('keydown', e => {
+    if (document.getElementById('sec-photography').classList.contains('active')) {
+      if (e.key === 'ArrowLeft')  carouselMove(-1);
+      if (e.key === 'ArrowRight') carouselMove(1);
+    }
+  });
+ 
+  buildCarousel();
 </script>
 </body>
 </html>
