@@ -553,7 +553,7 @@
     if (clickedEl) clickedEl.classList.add('active');
   }
  
-  // CAROUSEL
+// CAROUSEL
   const photos = [
     { file: 'Australia_Bondi_Beach.jpg', country: 'Australia', city: 'Bondi Beach' },
     { file: 'China_Xinjiang.jpg',        country: 'China',     city: 'Xinjiang' },
@@ -568,49 +568,104 @@
     { file: 'Tanzania_Zanzibar.jpg',       country: 'Tanzania',  city: 'Zanzibar' },
   ];
  
-  let current = 0;
+  // 初始化索引为 1，因为索引 0 变成了最后一张照片的替身
+  let current = 1; 
+  let isTransitioning = false; // 新增：动画状态锁，防止用户连续快速点击导致错位
+ 
   const track = document.getElementById('carouselTrack');
   const locEl  = document.getElementById('carouselLocation');
   const cntEl  = document.getElementById('carouselCounter');
   const dotsEl = document.getElementById('carouselDots');
  
+  // 提取了一个生成图片的辅助函数，让代码更干净
+  function createSlideElement(p) {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    const img = document.createElement('img');
+    img.src = 'photography/' + p.file;
+    img.alt = p.country + ' · ' + p.city;
+    img.loading = 'lazy';
+    slide.appendChild(img);
+    return slide;
+  }
+ 
   function buildCarousel() {
+    // 1. 克隆【最后一张照片】并添加到轨道最前面
+    track.appendChild(createSlideElement(photos[photos.length - 1]));
+ 
+    // 2. 添加所有真实的原始照片，并生成指示小圆点
     photos.forEach((p, i) => {
-      const slide = document.createElement('div');
-      slide.className = 'carousel-slide';
-      const img = document.createElement('img');
-      img.src = 'photography/' + p.file;
-      img.alt = p.country + ' · ' + p.city;
-      img.loading = i === 0 ? 'eager' : 'lazy';
-      slide.appendChild(img);
-      track.appendChild(slide);
+      track.appendChild(createSlideElement(p));
  
       const dot = document.createElement('button');
       dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.onclick = () => goTo(i);
+      dot.onclick = () => goTo(i + 1); // 点击小圆点时，目标索引需要 +1 避开替身
       dotsEl.appendChild(dot);
     });
+ 
+    // 3. 克隆【第一张照片】并添加到轨道最后面
+    track.appendChild(createSlideElement(photos[0]));
+ 
+    // 初始化：暂时关闭动画，将轨道悄悄移动到真实的第 1 张照片位置
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(-100%)';
+    track.offsetHeight; // 强制浏览器重绘 (极其重要的一步，否则瞬间移动会失效)
+    track.style.transition = ''; // 恢复 CSS 文件中写的默认 transition
+ 
     updateCaption();
+ 
+    // 4. 核心逻辑：监听滑动动画结束事件
+    track.addEventListener('transitionend', () => {
+      isTransitioning = false; // 动画结束，解锁点击
+ 
+      // 如果当前滑到了最后面的【第一张替身】
+      if (current === photos.length + 1) {
+        track.style.transition = 'none'; // 关动画
+        current = 1; // 索引瞬间切回真实的第 1 张
+        track.style.transform = 'translateX(-100%)'; // 瞬间归位
+        track.offsetHeight; // 强制重绘
+        track.style.transition = ''; // 开动画
+      } 
+      // 如果当前滑到了最前面的【最后一张替身】
+      else if (current === 0) {
+        track.style.transition = 'none';
+        current = photos.length; 
+        track.style.transform = 'translateX(-' + current * 100 + '%)';
+        track.offsetHeight; 
+        track.style.transition = ''; 
+      }
+    });
   }
  
   function updateCaption() {
-    const p = photos[current];
+    // 将包含替身的轨道 Index 映射回原本真实照片数组的 Index
+    let realIndex = current - 1;
+    if (realIndex === -1) realIndex = photos.length - 1;
+    if (realIndex === photos.length) realIndex = 0;
+ 
+    const p = photos[realIndex];
     locEl.innerHTML = '<span class="country">' + p.country + '</span>' + p.city;
-    cntEl.textContent = (current + 1) + ' / ' + photos.length;
+    cntEl.textContent = (realIndex + 1) + ' / ' + photos.length;
     document.querySelectorAll('.carousel-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === current);
+      d.classList.toggle('active', i === realIndex);
     });
   }
  
   function goTo(index) {
-    current = (index + photos.length) % photos.length;
+    // 如果正在动画中，或者点击的就是当前图片，则不作反应
+    if (isTransitioning || current === index) return;
+    
+    isTransitioning = true; // 上锁
+    current = index;
     track.style.transform = 'translateX(-' + current * 100 + '%)';
     updateCaption();
   }
  
-  function carouselMove(dir) { goTo(current + dir); }
+  function carouselMove(dir) { 
+    goTo(current + dir); 
+  }
  
-  // keyboard support
+  // 键盘左右键支持
   document.addEventListener('keydown', e => {
     if (document.getElementById('sec-photography').classList.contains('active')) {
       if (e.key === 'ArrowLeft')  carouselMove(-1);
