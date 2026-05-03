@@ -163,7 +163,7 @@
   <aside class="sidebar">
     <div class="profile-img-wrap">
       <!-- To add your photo: <img src="photo.jpg" alt="Zeyu Wang"> -->
-      <img src="photo.jpg"  alt="Zeyu Wang" class="profile-img">
+      <img src="./photos in first page/photo.jpg"  alt="Zeyu Wang" class="profile-img">
     </div>
     <div class="profile-name">Zeyu Wang</div>
     <div class="profile-role">PhD Applicant 2027</div>
@@ -231,26 +231,21 @@
         <p>
           I am a Master's graduate from the
           <strong>State Key Laboratory of Optoelectronic Materials and Technologies</strong>
-          at Sun Yat-sen University, where I worked with
-          <a href="#">Prof. Zhenrong Qin</a> and <a href="#">Prof. Bao-Ru Yang</a>.
-          I am currently applying for PhD programs in 2025.
+          at Sun Yat-sen University, where I was privileged to be advised by
+          <span style="color:var(--accent); font-weight:500;">Prof. Zong Qin</span>.
+          I am currently applying for PhD programs in 2027.
         </p>
         <p>
-          My research sits at the intersection of <strong>display optics</strong>,
-          <strong>deep learning</strong>, and <strong>computational imaging</strong>.
-          I focus on field sequential color (FSC) driving algorithms,
-          high-resolution light field displays, and AR/VR optical systems —
-          developing methods that bridge physical optics with data-driven approaches.
+          My research integrates <strong>display technologies</strong> with <strong>image processing</strong>,
+          with a focus on the development and practical application of Field Sequential Color (FSC)
+          driving algorithms. I have published in <em>Optics Express</em> and <em>Optics Letters</em>,
+          gave an oral presentation at the SID conference, and have had the opportunity to collaborate
+          on projects with companies such as <strong>CSOT</strong>, <strong>Huawei</strong>, and <strong>Hisense</strong>.
         </p>
         <p>
-          I have published in <em>Optics Express</em> and <em>Optics Letters</em>,
-          presented at SID and SPIE, hold 3 Chinese invention patents (1 granted),
-          and co-authored a textbook chapter on display photometry published by Science Press.
-          I have also led projects in collaboration with <strong>CSOT</strong> and <strong>Huawei</strong>.
-        </p>
-        <p>
-          Outside the lab, I am an avid photographer — drawn to landscapes, long exposures,
-          and the geometry of cities. Hiking and travel keep me grounded.
+          Outside of my academic pursuits, I am passionate about traveling and photography.
+          More of my work can be found in the
+          <a href="#" onclick="showSection('photography', document.querySelector('.nav-links li:nth-child(4) a')); return false;">photography</a> section.
         </p>
       </div>
 
@@ -260,15 +255,19 @@
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:0;">
         <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
           <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Advanced Display Technology</p>
-        </div>
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
-          <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Light Field Display</p>
+          <p style="font-size:0.78rem; color:var(--text-secondary); line-height:1.5;">field sequential color displays, mini-LED</p>
         </div>
         <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
           <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Image Processing</p>
+          <p style="font-size:0.78rem; color:var(--text-secondary); line-height:1.5;">classification, segmentation, feature extraction</p>
         </div>
         <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
           <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Deep Learning</p>
+          <p style="font-size:0.78rem; color:var(--text-secondary); line-height:1.5;">CNN, Resnet, Mobilenet</p>
+        </div>
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:0.85rem 1rem;">
+          <p style="font-size:0.85rem; font-weight:500; margin-bottom:4px;">Light Field Display</p>
+          <p style="font-size:0.78rem; color:var(--text-secondary); line-height:1.5;">elemental image array, microlens array</p>
         </div>
       </div>
       
@@ -297,14 +296,51 @@
         <div class="pub-title">High-resolution light field display based on a mini-LED field sequential color micro-LCD</div>
         <div class="pub-authors">Z. Qin, <span class="me">Z. Wang</span> <em style="font-size:0.73rem;color:var(--text-tertiary)">(1st student author)</em>, Q. Wang, G. Zou, et al.</div>
         <div class="pub-venue">Advances in Display Technologies XIV · SPIE · 2024</div>
-        <div class="pub-tags"><span class="tag">light field</span><span class="tag">FSC display</span><span class="tag">mini-LED</div>
+        <div class="pub-tags"><span class="tag">light field</span><span class="tag">FSC display</span><span class="tag">mini-LED</span><span class="tag conf">SPIE 2024</span></div>
+      </div>
+
+    <div class="section-divider"></div>
+ 
+      <h2 class="section-heading" style="font-size:1.35rem; margin-bottom:0.85rem;">Research Highlights</h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+ 
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.10)'" onmouseout="this.style.boxShadow='none'">
+          <div style="overflow:hidden; aspect-ratio:4/3;">
+            <img src="./photos in first page/img_fpga.png" alt="FPGA-based FSC display driving system" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="padding:0.75rem 0.85rem 0.85rem;">
+            <p style="font-size:0.8rem; font-weight:500; line-height:1.4; margin-bottom:4px; color:var(--text-primary);">FPGA-Based 3-Field FSC Display Driving System</p>
+            <p style="font-size:0.73rem; color:var(--text-secondary); line-height:1.5;">Hardware prototype implementing real-time FSC driving with dual FPGA boards, signal converter, and micro-LCD panel.</p>
+          </div>
+        </div>
+ 
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.10)'" onmouseout="this.style.boxShadow='none'">
+          <div style="overflow:hidden; aspect-ratio:4/3;">
+            <img src="./photos in first page/img_display.png" alt="FSC display imaging results" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="padding:0.75rem 0.85rem 0.85rem;">
+            <p style="font-size:0.8rem; font-weight:500; line-height:1.4; margin-bottom:4px; color:var(--text-primary);">FSC Display Imaging Results</p>
+            <p style="font-size:0.73rem; color:var(--text-secondary); line-height:1.5;">Original images and displayed images.</p>
+          </div>
+        </div>
+
+         <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.10)'" onmouseout="this.style.boxShadow='none'">
+          <div style="overflow:hidden; aspect-ratio:4/3;">
+            <img src="./photos in first page/img_lfd.png" alt="Light field display prototype" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="padding:0.75rem 0.85rem 0.85rem;">
+            <p style="font-size:0.8rem; font-weight:500; line-height:1.4; margin-bottom:4px; color:var(--text-primary);">Light Field Display Prototype</p>
+            <p style="font-size:0.73rem; color:var(--text-secondary); line-height:1.5;">LFD system with elemental image array (EIA) on 2.1-inch FSC micro-LCD, with reconstructed 3D imagery captured by camera.</p>
+          </div>
+        </div>
+ 
       </div>
     </section>
 
     <!-- PUBLICATIONS -->
     <section class="section" id="sec-publications">
       <h1 class="section-heading">Publications</h1>
-      <p style="font-size:0.75rem; font-family:'DM Mono',monospace; color:var(--text-tertiary); margin-bottom:1.5rem;">* equal contribution · underline = presenting author</p>
+      <!--p style="font-size:0.75rem; font-family:'DM Mono',monospace; color:var(--text-tertiary); margin-bottom:1.5rem;">* equal contribution · underline = presenting author</p-->
 
       <div class="pub-year-group">
         <div class="pub-year-label">Journal Articles</div>
@@ -312,19 +348,19 @@
           <div class="pub-title">Deep learning-based real-time driving for 3-field sequential color displays with low color breakup and high fidelity</div>
           <div class="pub-authors"><span class="me">Z. Wang</span>, G. Zou, Y. Shen, B.R. Yang, Z. Qin</div>
           <div class="pub-venue">Optics Express · 2023 · doi: 10.1364/OE.487198</div>
-          <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">deep learning</span><span class="tag">color breakup</span></div>
+          <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">MOO</span><span class="tag">deep learning</span><span class="tag">color breakup</span></div>
         </div>
         <div class="pub-card">
           <div class="pub-title">Two-field sequential color liquid crystal displays with deep learning-enabled real-time driving</div>
           <div class="pub-authors"><span class="me">Z. Wang</span>, G. Zou, Y. Li, C. Ma, Z. Zhang, G. Zha, Y. Shen, B.R. Yang, Z. Qin</div>
           <div class="pub-venue">Optics Letters · 2023 · doi: 10.1364/OL.501567</div>
-          <div class="pub-tags"><span class="tag">LCD</span><span class="tag">real-time driving</span><span class="tag">deep learning</span></div>
+          <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">deep learning</span><span class="tag">real-time</span></div>
         </div>
         <div class="pub-card">
           <div class="pub-title">Deep learning-enabled image content-adaptive field sequential color LCDs with mini-LED backlight</div>
           <div class="pub-authors">G. Zou, <span class="me">Z. Wang</span>, Y. Liu, J. Li, X. Liu, J. Liu, B.R. Yang, Z. Qin</div>
           <div class="pub-venue">Optics Express · 2022 · doi: 10.1364/OE.459752</div>
-          <div class="pub-tags"><span class="tag">mini-LED</span><span class="tag">image-adaptive</span><span class="tag">FSC</span></div>
+          <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">mini-LED</span><span class="tag">image-adaptive</span></div>
         </div>
       </div>
 
@@ -334,31 +370,31 @@
           <div class="pub-title">High-resolution light field display based on a mini-LED field sequential color micro-LCD</div>
           <div class="pub-authors">Z. Qin, <span class="me">Z. Wang</span> <em style="font-size:0.73rem;color:var(--text-tertiary)">(1st student author)</em>, Q. Wang, G. Zou, Y. Cheng, Y. Liu, Y. Li, C. Ma, Z. Zhang</div>
           <div class="pub-venue">Advances in Display Technologies XIV · SPIE · 2024 · doi: 10.1117/12.2692767</div>
-          <div class="pub-tags"><span class="tag">light field</span><span class="tag">mini-LED</span><span class="tag conf">SPIE 2024</span></div>
+          <div class="pub-tags"><span class="tag">light field</span><span class="tag">FSC display</span><span class="tag">mini-LED</span><span class="tag conf">SPIE 2024</span></div>
         </div>
         <div class="pub-card">
           <div class="pub-title">90-4: Field Sequential Color Micro-LCD Enabling High-resolution Light Field Displays</div>
           <div class="pub-authors">Z. Qin, Q. Wang, Y. Li, C. Ma, Z. Zhang, Y. Wu, G. Zha, <span class="me">Z. Wang</span>, Y. Cheng, et al.</div>
           <div class="pub-venue">SID Symposium Digest of Technical Papers · 2024 · doi: 10.1002/sdtp.17775</div>
-          <div class="pub-tags"><span class="tag">FSC</span><span class="tag">micro-LCD</span><span class="tag conf">SID 2024</span></div>
+          <div class="pub-tags"><span class="tag">light field</span><span class="tag">FSC display</span><span class="tag conf">SID 2024</span></div>
         </div>
         <div class="pub-card">
           <div class="pub-title">Deep Learning Designed Driving Method for Field Sequential Color Displays</div>
           <div class="pub-authors"><span class="me">Z. Wang</span>, G. Zou, Y. Shen, B.R. Yang, Z. Qin</div>
           <div class="pub-venue">Laser Science · FiO 2022 · doi: 10.1364/FIO.2022.JW4B.49</div>
-          <div class="pub-tags"><span class="tag">FSC</span><span class="tag">driving algorithm</span><span class="tag conf">FiO 2022</span></div>
+          <div class="pub-tags"><span class="tag">FSC display</span><span class="tag">deep learning</span><span class="tag conf">FiO 2022</span></div>
         </div>
         <div class="pub-card">
           <div class="pub-title">75-3: Field sequential color displays with simultaneously suppressed color breakup and flicker based on multi-objective optimization</div>
           <div class="pub-authors"><span class="me">Z. Wang</span>, G. Zou, B.R. Yang, Z. Qin</div>
           <div class="pub-venue">SID Symposium Digest of Technical Papers · 2022 · doi: 10.1002/sdtp.15670</div>
-          <div class="pub-tags"><span class="tag">multi-objective</span><span class="tag">flicker</span><span class="tag conf">SID 2022</span></div>
+          <div class="pub-tags"><span class="tag">MOO</span><span class="tag">color breakup</span><span class="tag">flicker</span><span class="tag conf">SID 2022</span></div>
         </div>
         <div class="pub-card">
           <div class="pub-title">65-1: Deep Learning-Enabled Image Content Adaptive Driving Algorithm for Field Sequential Color LCDs with Mini-LED Backlight</div>
           <div class="pub-authors">G. Zou, <span class="me">Z. Wang</span>, W. Yang, B.R. Yang, Z. Qin</div>
           <div class="pub-venue">SID Symposium Digest of Technical Papers · 2022 · doi: 10.1002/sdtp.15628</div>
-          <div class="pub-tags"><span class="tag">mini-LED</span><span class="tag">content-adaptive</span><span class="tag conf">SID 2022</span></div>
+          <div class="pub-tags"><span class="tag">mini-LED</span><span class="tag">image-adaptive</span><span class="tag conf">SID 2022</span></div>
         </div>
       </div>
 
@@ -474,7 +510,7 @@
         <p style="font-size:0.9rem;color:var(--text-secondary);text-align:center;font-family:'Crimson Pro',serif;font-style:italic;">
           Full CV available as PDF · Updated 2026
         </p>
-        <a class="cv-btn" href="Zeyu_Wang_CV.pdf" target="Zeyu_Wang_CV.pdf">
+        <a class="cv-btn" href="Zeyu_Wang_CV" target="Zeyu_Wang_CV.pdf">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
           Download CV (PDF)
         </a>
