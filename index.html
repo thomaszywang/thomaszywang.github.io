@@ -17,7 +17,7 @@
   }
   html { font-size: 15px; scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text-primary); min-height: 100vh; }
-
+ 
   nav {
     position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h);
     background: rgba(247,246,243,0.90); backdrop-filter: blur(12px);
@@ -30,9 +30,9 @@
   .nav-links a { font-size: 0.82rem; font-weight: 400; color: var(--text-secondary); text-decoration: none; padding: 5px 14px; border-radius: 20px; transition: all 0.2s; letter-spacing: 0.01em; }
   .nav-links a:hover, .nav-links a.active { background: var(--surface); color: var(--text-primary); box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
   .nav-links a.active { font-weight: 500; }
-
+ 
   .layout { max-width: 1060px; margin: 0 auto; padding: calc(var(--nav-h) + 2.5rem) 2rem 4rem; display: grid; grid-template-columns: var(--sidebar-w) 1fr; gap: 2.5rem; align-items: start; }
-
+ 
   .sidebar { position: sticky; top: calc(var(--nav-h) + 1.5rem); animation: fadeUp 0.6s 0.1s ease both; }
   .profile-img-wrap { width: 100%; aspect-ratio: 4/3; border-radius: var(--radius); overflow: hidden; background: linear-gradient(145deg, #8ba8c4, #5a7fa8); margin-bottom: 1.25rem; box-shadow: var(--shadow); position: relative; }
   .profile-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
@@ -43,12 +43,12 @@
   .profile-name { font-family: 'Crimson Pro', serif; font-size: 1.55rem; font-weight: 600; text-align: center; letter-spacing: -0.01em; line-height: 1.2; }
   .profile-role { text-align: center; color: var(--accent); font-size: 0.82rem; font-weight: 500; margin: 4px 0 3px; }
   .profile-affil { text-align: center; color: var(--text-secondary); font-size: 0.8rem; }
-
+ 
   .social-row { display: flex; justify-content: center; gap: 10px; margin: 1rem 0 1.25rem; }
   .social-btn { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; cursor: pointer; }
   .social-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
   .social-btn svg { width: 15px; height: 15px; fill: currentColor; }
-
+ 
   .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; margin-top: 0.75rem; }
   .sidebar-card-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.65rem; }
   .interest-item { font-size: 0.82rem; color: var(--text-secondary); padding: 4px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 7px; line-height: 1.4; }
@@ -60,25 +60,25 @@
   .edu-detail { font-size: 0.75rem; color: var(--text-secondary); margin-top: 1px; }
   .edu-year { font-size: 0.7rem; font-family: 'DM Mono', monospace; color: var(--text-tertiary); margin-top: 2px; }
   .skill-pill { font-size: 0.75rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 2px 7px; color: var(--text-secondary); }
-
+ 
   .main { animation: fadeUp 0.6s 0.2s ease both; }
   .section { display: none; }
   .section.active { display: block; animation: fadeIn 0.3s ease both; }
   .section-heading { font-family: 'Crimson Pro', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.01em; }
   .section-divider { height: 1px; background: var(--border); margin: 2rem 0; }
-
+ 
   .about-text p { font-size: 0.93rem; line-height: 1.85; color: var(--text-secondary); margin-bottom: 0.9rem; }
   .about-text p:last-child { margin-bottom: 0; }
   .about-text a { color: var(--accent); text-decoration: none; font-weight: 500; }
   .about-text a:hover { text-decoration: underline; }
   .about-text strong { color: var(--text-primary); font-weight: 500; }
-
+ 
   .pub-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1rem; }
   .view-all { font-size: 0.8rem; color: var(--accent); font-weight: 500; cursor: pointer; background: none; border: none; }
   .view-all:hover { text-decoration: underline; }
   .pub-year-label { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--text-tertiary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem; padding-left: 2px; }
   .pub-year-group { margin-bottom: 1.5rem; }
-
+ 
   .pub-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: 0.6rem; transition: box-shadow 0.2s, border-color 0.2s; }
   .pub-card:hover { box-shadow: var(--shadow); border-color: #d8d3cc; }
   .pub-title { font-size: 0.87rem; font-weight: 500; line-height: 1.45; margin-bottom: 4px; }
@@ -90,12 +90,12 @@
   .tag.conf { background: #eef3f9; color: #3a6496; }
   .tag.granted { background: #f0f5ec; color: #4a7a35; }
   .tag.pending { background: #f5f0e8; color: #8a6a2a; }
-
+ 
   .list-item { padding: 0.75rem 0; border-bottom: 1px solid var(--border-light); font-size: 0.85rem; line-height: 1.7; color: var(--text-secondary); }
   .list-item:last-child { border-bottom: none; }
   .list-item .me { color: var(--accent); font-weight: 500; }
   .list-item strong { color: var(--text-primary); font-weight: 500; }
-
+ 
   .proj-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.25rem; margin-bottom: 0.75rem; }
   .proj-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 5px; }
   .proj-title { font-size: 0.9rem; font-weight: 500; line-height: 1.4; }
@@ -103,7 +103,7 @@
   .proj-role { font-size: 0.78rem; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
   .proj-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.75; }
   .proj-desc li { margin-left: 1.1rem; margin-bottom: 3px; }
-
+ 
   .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .photo-item { aspect-ratio: 3/2; border-radius: var(--radius); overflow: hidden; position: relative; cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; }
   .photo-item:first-child { grid-column: span 2; aspect-ratio: 16/9; }
@@ -121,21 +121,21 @@
   .photo-item:nth-child(5) { background: linear-gradient(145deg, #8aaec0, #5a8899); }
   .photo-placeholder-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
   .photo-placeholder-text span { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: rgba(255,255,255,0.7); letter-spacing: 0.08em; text-transform: uppercase; }
-
+ 
   .award-item { display: flex; gap: 1rem; align-items: flex-start; padding: 0.85rem 0; border-bottom: 1px solid var(--border-light); }
   .award-item:last-child { border-bottom: none; }
   .award-year { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--text-tertiary); min-width: 48px; padding-top: 2px; }
   .award-title { font-size: 0.88rem; font-weight: 500; margin-bottom: 2px; }
   .award-org { font-size: 0.78rem; color: var(--text-secondary); }
-
+ 
   .cv-section { display: flex; flex-direction: column; align-items: center; padding: 3rem 0; gap: 1rem; }
   .cv-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: white; font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: all 0.2s; cursor: pointer; }
   .cv-btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
-
+ 
   @keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
+ 
   @media (max-width: 720px) {
     .layout { grid-template-columns: 1fr; padding-left: 1rem; padding-right: 1rem; }
     .sidebar { position: static; }
@@ -144,6 +144,41 @@
     .photo-grid { grid-template-columns: 1fr 1fr; }
     .photo-item:first-child { grid-column: span 2; }
   }
+ 
+  /* CAROUSEL */
+  .carousel-wrap {
+    position: relative; width: 100%; height: 460px;
+    border-radius: var(--radius); overflow: hidden;
+    background: #111; box-shadow: var(--shadow);
+  }
+  .carousel-track { display: flex; height: 100%; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+  .carousel-slide { min-width: 100%; height: 100%; position: relative; flex-shrink: 0; }
+  .carousel-slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+  .carousel-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.25); color: white; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, transform 0.2s; z-index: 10;
+  }
+  .carousel-btn:hover { background: rgba(255,255,255,0.30); transform: translateY(-50%) scale(1.08); }
+  .carousel-btn svg { width: 22px; height: 22px; fill: white; }
+  .carousel-prev { left: 16px; }
+  .carousel-next { right: 16px; }
+  .carousel-caption-bar {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 2rem 1.5rem 1.1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, transparent 100%);
+    display: flex; align-items: flex-end; justify-content: space-between;
+    pointer-events: none;
+  }
+  .carousel-location { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; color: #fff; letter-spacing: 0.03em; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+  .carousel-location .country { font-size: 0.72rem; font-family: 'DM Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; display: block; margin-bottom: 3px; }
+  .carousel-counter { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.65); letter-spacing: 0.06em; }
+  .carousel-dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+  .carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.2s, transform 0.2s; border: none; padding: 0; }
+  .carousel-dot.active { background: var(--accent); transform: scale(1.3); }
 </style>
 </head>
 <body>
@@ -474,7 +509,6 @@
     <section class="section" id="sec-photography">
       <h1 class="section-heading">Photography</h1>
       <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.75rem;font-family:'Crimson Pro',serif;font-style:italic;line-height:1.8;">
-        Capturing light — what I study in the lab, what I chase outside it.<br>
         Landscapes and moments from travels across the world.
       </p>
  
