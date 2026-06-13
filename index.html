@@ -264,21 +264,14 @@
       <h1 class="section-heading">About</h1>
       <div class="about-text">
         <p>
-          I am a Master's graduate from the
-          <strong>State Key Laboratory of Optoelectronic Materials and Technologies</strong>
-          at Sun Yat-sen University, where I was privileged to be advised by
-          <span style="color:var(--accent); font-weight:500;">Prof. Zong Qin</span>.
+          I received my M.S. degree from the State Key Laboratory of Optoelectronic Materials and Technologies at Sun Yat-sen University, where I was advised by Prof. Zong Qin.
           I am currently applying for PhD programs in 2027.
         </p>
         <p>
-          My research integrates <strong>display technologies</strong> with <strong>image processing</strong>,
-          with a focus on the development and practical application of Field Sequential Color (FSC)
-          driving algorithms. I have published in <em>Optics Express</em> and <em>Optics Letters</em>,
-          gave an oral presentation at the SID conference, and have had the opportunity to collaborate
-          on projects with companies such as <strong>CSOT</strong>.
+          My research focuses on the integration of display systems and computational methods, with an emphasis on Field Sequential Color (FSC) driving methods. I have published in Optics Express and Optics Letters, presented at SID and FiO conferences, and collaborated with industry partners including CSOT and Hisense.
         </p>
         <p>
-          Outside of my academic pursuits, I am passionate about traveling and photography.
+          Outside of research, I enjoy traveling and photography.
           More of my work can be found in the
           <a href="#" onclick="showSection('photography', document.querySelector('.nav-links li:nth-child(4) a')); return false;">photography</a> section.
         </p>
@@ -461,8 +454,9 @@
         <div class="pub-year-label">Textbook</div>
         <div class="list-item">
           <strong>Wearable Optoelectronic Display Technology</strong><br>
-          Science Press, Beijing · 2022<br>
-          <span class="me">Z. Wang</span> — primary author of <em>Chapter 2: Photometry, Colorimetry, and Display System Performance Evaluation</em>
+          Edited by Bo-Ru Yang, Science Press, Beijing · 2022<br>
+          <span class="me">Z. Wang</span> — Contributor to Chapter 2 Photometry, Colorimetry, and Display System Performance Evaluation,
+with the Chapter authored by Zong Qin
         </div>
       </div>
     </section>
@@ -473,29 +467,44 @@
 
       <div class="proj-card">
         <div class="proj-header">
-          <div class="proj-title">Design of VR Optical Machine Based on FSC Display</div>
+          <div class="proj-title">Field Sequential Color Display for Pancake VR System</div>
           <div class="proj-period">Jan 2023 – Dec 2023</div>
         </div>
-        <div class="proj-role">Project Leader · In collaboration with China Star Optoelectronics Technology (CSOT)</div>
+        <div class="proj-role">Primary Contributor · In collaboration with China Star Optoelectronics Technology (CSOT)</div>
         <div class="proj-desc">
           <ul>
-            <li>Developed a VR optical engine prototype based on Field Sequential Color (FSC) display technology, addressing demands for high resolution, high brightness, and cost efficiency.</li>
-            <li>Applied multi-objective optimization and deep learning to the driving algorithm, enabling real-time high-resolution image generation with low distortion and minimal color breakup.</li>
-            <li>Presented the final VR prototype at the 2023 Society for Information Display (SID) International Symposium.</li>
+            <li>Developed a driving method integrating multi-objective optimization and deep learning to enable real-time high-resolution image generation with minimal distortion and color breakup</li>
+            <li>Applied the driving method to a Pancake VR prototype featuring dual 2K displays on an FPGA platform, achieving real-time performance at 60 FPS</li>
+            <li>CSOT demonstrated the VR prototype at CES 2024, Las Vegas, NV, USA</li>
           </ul>
         </div>
       </div>
-
+      
+      <div class="proj-card">
+        <div class="proj-header">
+          <div class="proj-title">Driving Method for Field Sequential Color 4K TV Display</div>
+          <div class="proj-period">Dec 2023 – June 2024</div>
+        </div>
+        <div class="proj-role">Primary Contributor · In collaboration with Hisense</div>
+        <div class="proj-desc">
+          <ul>
+            <li>Developed a deep learning-based driving method to suppress color breakup, distortion, and flicker in a 85-inch 4K mini-LED TV</li>
+            <li>Proposed a two-field driving method that synchronously generates backlight and LC signals using dual lightweight neural networks, reducing refresh rate requirements and data transmission bandwidth</li>
+            <li>Validated performance using objective metrics and subjective visual evaluation on large-scale displays</li>
+          </ul>
+        </div>
+      </div>
+      
       <div class="proj-card">
         <div class="proj-header">
           <div class="proj-title">Multi-focal Plane AR Head-Up Display (AR-HUD)</div>
           <div class="proj-period">Jun 2021 – Feb 2022</div>
         </div>
-        <div class="proj-role">Algorithm Development Leader</div>
+        <div class="proj-role">Primary Contributor · Advisor: Prof. Zong Qin</div>
         <div class="proj-desc">
           <ul>
-            <li>Developed an ultra-low-complexity driving algorithm for multi-focal plane AR-HUD systems based on LCoS displays in automotive environments.</li>
-            <li>Enabled real-time high-resolution image generation while effectively mitigating color breakup, delivering enhanced stability and brightness for automotive HUD applications.</li>
+            <li>Developed an ultra-low-complexity driving method for the system, leveraging global dimming to suppress color breakup while preserving image quality</li>
+            <li>Enabled real-time generation of high-resolution images with high brightness and optical efficiency for automotive AR-HUD applications</li>
           </ul>
         </div>
       </div>
